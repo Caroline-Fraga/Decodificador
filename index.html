@@ -11,39 +11,41 @@
 
 <body>
     <header class="cabecalho">
-        <img class="cabecalho-imagem" src="imagens/logoalura.png" alt="Logo da Alura">
-
+        <img class="logo" src="imagens/logoalura.png" alt="Logotipo do projeto Decodificador">
     </header>
 
-    <main class="conteudo"> 
-        <section class="conteudo-principal">
-            <div class="conteudo-principal-escrito">
-                <textarea class="conteudo-principal-escrito-areatexto" placeholder="Digite seu texto"></textarea>
-                <h6 class="conteudo-principal-escrito-aviso">❕ Apenas letras minúsculas e sem acento.</h6>
+    <main class="container" id="principal">
+        <section class="principal">
+            <label for="entrada-texto" class="rotulo-visual">Texto de entrada</label>
+            <div class="entrada">
+                <textarea id="entrada-texto" placeholder="Digite seu texto" aria-describedby="aviso" rows="10"></textarea>
+                <p id="aviso" class="aviso">❕ Apenas letras minúsculas e sem acento.</p>
             </div>
-            <div class="conteudo-principal-botoes">
-                <button class="conteudo-principal-botoes-encriptar" onclick="criptografar()">Criptografar</button>
-                <button class="conteudo-principal-botoes-desencriptar" onclick="descriptografar()">Descriptografar</button>
+
+            <div class="botoes">
+                <button id="btn-criptografar" type="button">Criptografar</button>
+                <button id="btn-descriptografar" type="button">Descriptografar</button>
             </div>
         </section>
 
-        <section class="conteudo-secundario">
-            <textarea class="conteudo-secundario-areatexto" readonly></textarea>
-            <div class="conteudo-secundario-mensagem">
-                <p class="conteudo-secundario-mensagem-nenhumamensagemencontrada">Nenhuma mensagem encontrada</p>
-                <p class="conteudo-secundario-mensagem-digiteumtexto">Digite um texto que você deseja criptografar ou descriptografar.</p>
-            </div>
-            <button class="conteudo-secundario-botao" onclick="copiar()">Copiar</button>          
-        </section>
+        <section class="secundario">
+            <label for="saida-texto" class="rotulo-visual">Saída</label>
+            <textarea id="saida-texto" readonly aria-live="polite" rows="12" placeholder="Resultado"></textarea>
 
+            <div class="mensagem" id="mensagem-estado">
+                <p class="mensagem-titulo">Nenhuma mensagem encontrada</p>
+                <p class="mensagem-texto">Digite um texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+
+            <button id="btn-copiar" type="button">Copiar</button>
+        </section>
     </main>
 
     <footer class="rodape">
-        © Desenvolvido por Caroline 😊
+        © Desenvolvido por Caroline
     </footer>
 
-    <script src="script.js"></script>
-
+    <script src="script.js" defer></script>
 </body>
 
 </html>

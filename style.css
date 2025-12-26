@@ -1,199 +1,183 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+:root{
+    --cor-primaria: #0A3871;
+    --cor-secundaria: #D8DFE8;
+    --cor-fundo: #E5E5E5;
+    --texto: #0A3871;
+    --radius: 18px;
+    --gap: 1.5rem;
 }
 
-body {
-    font-size: 100%;
-    background-color: #E5E5E5;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-.cabecalho {
-    display: flex;
-    flex-direction: row;
-    padding: 6px;
-}
-
-.cabecalho-imagem {
-    width: 100px;
-    height: 40px;
-}
-
-.conteudo {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 30px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    margin-left: 30px;
-    margin-right: 30px;
-    border: 2px dotted #0A3871;
-}
-
-.conteudo-principal {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.conteudo-principal-escrito {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.conteudo-principal-escrito-areatexto {
-    width: 700px;
-    height: 370px;
-    padding: 20px;
-    border: 2px dotted #0A3871;
-    border-radius: 18px;
-    background-color: #E5E5E5;
-    text-transform: lowercase;
+html,body{
+    height:100%;
     font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    color: #0A3871;
+    background-color: var(--cor-fundo);
+    color: var(--texto);
 }
 
-.conteudo-principal-escrito-areatexto:focus {
-    outline: none;
+.cabecalho{
+    padding:10px 16px;
 }
 
-::placeholder {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    color: #0A3871;
-    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.40);
-    text-transform: none;
+.logo{
+    width:100px;
+    height:auto;
 }
 
-.conteudo-principal-escrito-aviso {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-    color: #495057;
+.container{
+    display:flex;
+    gap:var(--gap);
+    justify-content:space-around;
+    padding:24px;
+    margin:16px;
+    border:2px dotted var(--cor-primaria);
+    flex-wrap:wrap;
 }
 
-.conteudo-principal-botoes {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 30px;
+.principal{
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+    flex:1 1 600px;
+    min-width:260px;
 }
 
-
-.conteudo-principal-botoes-encriptar {
-    background-color: #0A3871;
-    color: #FFFFFF;
-    width: 250px;
-    height: 50px;
-    border: 0.4px solid #FFFFFF;
-    border-radius: 18px;
-    cursor: pointer;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
+.entrada{
+    display:flex;
+    flex-direction:column;
+    gap:0.5rem;
 }
 
-.conteudo-principal-botoes-encriptar:hover {
-    opacity: 0.5; 
+/* rótulos visuais escondidos mas acessíveis */
+.rotulo-visual{
+    position:absolute;
+    left:-9999px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
 }
 
-.conteudo-principal-botoes-desencriptar {
-    background-color: #D8DFE8;
-    color: #0A3871;
-    width: 250px;
-    height: 50px;
-    border: 0.4px solid #0A3871;
-    border-radius: 18px;
-    cursor: pointer;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
+#entrada-texto, #saida-texto{
+    width:100%;
+    padding:20px;
+    border:2px dotted var(--cor-primaria);
+    border-radius:var(--radius);
+    background-color:var(--cor-fundo);
+    font-size:1.125rem;
+    color:var(--texto);
+    resize:vertical;
 }
 
-.conteudo-principal-botoes-desencriptar:hover {
-    opacity: 0.5; 
+#entrada-texto:focus, #saida-texto:focus{
+    outline:2px solid rgba(10,56,113,0.15);
 }
 
-.conteudo-secundario {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative; 
+::placeholder{
+    color:var(--texto);
+    font-size:1.125rem;
 }
 
-.conteudo-secundario-areatexto {
-    width: 400px;
-    height: 450px;
-    padding: 20px;
-    background-image:  url(imagens/boneco.png);
-    background-repeat: no-repeat;
-    background-position: center 55px;
-    background-size: 250px 250px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    color: #0A3871;
-    border: 2px dotted #0A3871;
-    border-radius: 18px;
+.aviso{
+    font-size:0.875rem;
+    color:#495057;
 }
 
-.conteudo-secundario-areatexto:focus {
-    outline: none;
+.botoes{
+    display:flex;
+    gap:1rem;
 }
 
-.conteudo-secundario-mensagem {
-    font-family: 'Inter', sans-serif;
-    color: #343A40;
-    position: absolute;
-    text-align: center;
-    margin-top: 300px;
-}
-.conteudo-secundario-mensagem-nenhumamensagemencontrada {
-    font-weight: 700;
-    font-size: 20px;
+.botoes button, #btn-copiar{
+    cursor:pointer;
+    border-radius:var(--radius);
+    padding:12px 18px;
+    border:0.4px solid transparent;
+    font-size:1rem;
 }
 
-
-.conteudo-secundario-mensagem-digiteumtexto {
-    font-weight: 400;
-    font-size: 16px;
-    padding: 5px;
+#btn-criptografar{
+    background-color:var(--cor-primaria);
+    color:#fff;
+    width:250px;
 }
 
-.conteudo-secundario-botao {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    background-color: #D8DFE8;
-    color: #0A3871;
-    width: 250px;
-    height: 50px;
-    border: 0.4px solid #0A3871;
-    border-radius: 18px;
-    cursor: pointer;
-    position: absolute;
-    margin-top: 380px;
+#btn-descriptografar, #btn-copiar{
+    background-color:var(--cor-secundaria);
+    color:var(--cor-primaria);
+    width:250px;
+    border:0.4px solid var(--cor-primaria);
 }
 
-.conteudo-secundario-botao:hover {
-    opacity: 0.5; 
+.secundario{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:1rem;
+    flex:0 1 420px;
+    min-width:220px;
+    position:relative;
 }
 
-.rodape {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    text-align: center;
-    color: #0A3871;
-    padding: 6px;
+#saida-texto{
+    height:420px;
+    background-image: url(imagens/boneco.png);
+    background-repeat:no-repeat;
+    background-position:center 55px;
+    background-size:250px 250px;
+}
+
+.mensagem{
+    color:#343a40;
+    text-align:center;
+    margin-top:-40px;
+}
+
+.mensagem-titulo{
+    font-weight:700;
+    font-size:1.125rem;
+}
+
+.mensagem-texto{
+    font-size:1rem;
+}
+
+.rodape{
+    text-align:center;
+    padding:8px;
+    color:var(--cor-primaria);
+}
+
+/* Responsividade básica */
+@media (max-width:900px){
+    .container{ padding:16px; }
+    #entrada-texto{ min-height:220px }
+    #saida-texto{ height:320px }
+}
+
+@media (max-width:600px){
+    .container{ flex-direction:column; align-items:stretch; padding:12px; gap:1rem }
+    .principal, .secundario{ flex:1 1 auto; min-width:100% }
+    /* Empilha botões e faz botões e textareas preencherem a largura disponível */
+    .botoes{ flex-direction:column; gap:.75rem; align-items:stretch }
+    .botoes button, #btn-copiar{ width:100% }
+    #entrada-texto, #saida-texto{ width:100%; box-sizing:border-box }
+    /* Ajustes de altura para mobile */
+    #entrada-texto{ min-height:180px }
+    #saida-texto{ height:auto; min-height:260px; background-size:180px 180px; background-position: center 40px }
+}
+
+@media (max-width:380px){
+    /* Em telas muito pequenas, reduz padding e fontes levemente */
+    :root{ --gap:1rem }
+    #entrada-texto, #saida-texto{ padding:14px; font-size:1rem }
+    .botoes button, #btn-copiar{ padding:10px }
 }
 
