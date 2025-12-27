@@ -45,7 +45,7 @@
 
 ## Acesso ao projeto
 
-- 🔗 Clique [aqui](https://decodificador-nu-five.vercel.app/) para acessar o projeto e utilizá-lo. 
+- 🔗 Clique [aqui](https://caroline-fraga.github.io/Decodificador/) para acessar o projeto e utilizá-lo. 
 - 📁 Clique [aqui](https://github.com/Caroline-Fraga/Decodificador) para acessar o código do projeto ou baixá-lo.
 
 ## Abrir e executar o projeto
