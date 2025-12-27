@@ -45,8 +45,8 @@
 
 ## Acesso ao projeto
 
-- 🔗 Clique [aqui](https://img.shields.io/badge/Deploy-Vercel-000000?style=flat&logo=vercel&logoColor=white)](https://projeto-dio-interface-netflix.vercel.app/) para acessar o projeto e utilizá-lo. 
-- 📁 Clique [aqui](https://img.shields.io/badge/Repo-GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/Caroline-Fraga/Decodificador) para acessar o código do projeto ou baixá-lo.
+- 🔗 Clique [aqui](https://img.shields.io/badge/Deploy-Vercel-000000?style=flat&logo=vercel&logoColor=white)(https://projeto-dio-interface-netflix.vercel.app/) para acessar o projeto e utilizá-lo. 
+- 📁 Clique [aqui](https://img.shields.io/badge/Repo-GitHub-181717?style=flat&logo=github&logoColor=white)(https://github.com/Caroline-Fraga/Decodificador) para acessar o código do projeto ou baixá-lo.
 
 ## Abrir e executar o projeto
 
